@@ -13,10 +13,19 @@
         android:theme="@style/Theme.Bike"
         tools:targetApi="31">
         <activity
-            android:name=".UI.ProductList"
-            android:label="Product List"
-            android:parentActivityName=".UI.MainActivity"
+            android:name=".UI.ProductDetails"
+            android:label="Product Details and Parts List"
+            android:parentActivityName=".UI.ProductList"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".UI.ProductList"
+            android:exported="false"
+            android:label="Product List"
+            android:parentActivityName=".UI.MainActivity">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
