@@ -39,6 +39,18 @@ public class Repository {
         return mAllProducts;
     }
 
+    public List<Part>getAllParts(){
+        databaseExecutor.execute(()->{
+            mAllParts=mPartDAO.getAllParts();
+        });
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return mAllParts;
+    }
+
     public void insert(Product product) {
         databaseExecutor.execute(()->{
             mProductDAO.insert(product);
